@@ -70,6 +70,6 @@ process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
   // code. You can also put them in separate files and require them here.
   function runMain(){
   	console.log("start");
-  	// var LeaderBoad = require('./app/js/leader-board.js');
+  	var MasterContorl = require('./app/js/MasterControl.js');
   	// LeaderBoad.init(displayWin, controlWin);
   }
