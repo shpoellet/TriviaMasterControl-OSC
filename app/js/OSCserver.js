@@ -26,9 +26,9 @@ module.exports = class OSCserver {
     this.osc.open({host: '0.0.0.0', port : this.listenPort})
   }
 
-  sendCommand(host, port, command, useValue = false, value){
+  sendCommand(host, port, command, value){
     const message = new OSC.Message(command);
-    if (useValue) message.add(value);
+    if (typeof value !== 'undefined') message.add(value);
     this.osc.send(message, {host: host, port: port});
   }
 }
